@@ -1,0 +1,50 @@
+CREATE TABLE Item_Info
+(
+  itemNumber CHAR(5) NOT NULL,
+  itemName CHAR(25) NOT NULL,
+  itemCategory CHAR(25) NOT NULL,
+  itemQuantity INT NOT NULL,
+  itemLocation CHAR(60) NOT NULL,
+  itemPicture  NOT NULL,
+  PRIMARY KEY (itemNumber)
+);
+
+CREATE TABLE Advanced_Item_Info
+(
+  itemCost INT NOT NULL,
+  itemCondition CHAR(10) NOT NULL,
+  itemDescription CHAR(50) NOT NULL,
+  itemNumber CHAR(5) NOT NULL,
+  PRIMARY KEY (itemNumber)
+);
+
+CREATE TABLE Historical_Item_Info
+(
+  itemNumber CHAR(5) NOT NULL,
+  dateLastUsed DATE NOT NULL,
+  showLastUsed CHAR(25) NOT NULL,
+  PRIMARY KEY (itemNumber)
+);
+
+CREATE TABLE Theater_Status
+(
+  itemNumber CHAR(5) NOT NULL,
+  rentedOut CHAR(1) NOT NULL,
+  locationRented CHAR(40) NOT NULL,
+  PRIMARY KEY (itemNumber)
+);
+
+CREATE TABLE Tag_Database
+(
+  tag1 CHAR(15) NOT NULL,
+  tag2 CHAR(15) NOT NULL,
+  tag3 CHAR(15) NOT NULL
+);
+
+CREATE TABLE User_Database
+(
+  firstName CHAR(10) NOT NULL,
+  lastName CHAR(25) NOT NULL,
+  userName CHAR(50) NOT NULL,
+  userPassword CHAR(50) NOT NULL
+);
